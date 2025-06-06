@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+/* Telegram Blue Theme */
+:root {
+  --primary-teal: #0088cc; /* Teal */
+  --light-teal: #0088cc; /* Light Teal */
+  --dark-teal: #00796b; /* Dark Teal */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f0f4f8; /* Lighter background */
+  --text-primary: #263238; /* Dark Grey */
+  --text-secondary: #546e7a; /* Grey */
+  --border-color: #cfd8dc; /* Light Grey Blue */
+  --message-out: #e0f2f7; /* Light Cyan */
+  --message-in: #ffffff;
+  --hover-bg: #e0f2f7; /* Light Cyan */
+  --active-bg: #b2ebf2; /* Cyan */
+}
+
+/* Custom utility classes */
+.bg-primary-color {
+  background-color: var(--primary-teal);
+}
+
+.text-primary-color {
+  color: var(--primary-teal);
+}
+
+.bg-message-out {
+  background-color: var(--message-out);
+}
+
+.bg-message-in {
+  background-color: var(--message-in);
+}
+
+.text-primary {
+  color: var(--text-primary);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.border-custom {
+  border-color: var(--border-color);
+}
+
+.bg-hover:hover {
+  background-color: var(--hover-bg);
+}
+
+.bg-active {
+  background-color: var(--active-bg);
+}
+
+/* Scrollbar styling for webkit browsers */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Message animations */
+.message-slide-in {
+  animation: slideIn 0.2s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Input focus styles */
+.input-custom:focus {
+  outline: none;
+  border-color: var(--primary-teal);
+  box-shadow: 0 0 0 2px rgba(0, 150, 136, 0.1);
+}
+
+/* Button styles */
+.btn-custom {
+  background-color: var(--primary-teal);
+  transition: all 0.2s ease;
+}
+
+.btn-custom:hover:not(:disabled) {
+  background-color: var(--dark-teal);
+  transform: translateY(-1px);
+}
+
+.btn-custom:active {
+  transform: translateY(0);
+}
+
+/* Chat item styles */
+.chat-item {
+  transition: background-color 0.15s ease;
+}
+
+.chat-item:hover {
+  background-color: var(--hover-bg);
+}
+
+.chat-item.selected {
+  background-color: var(--active-bg);
+}
+
+/* Status indicator styles */
+.status-online {
+  background-color: #4CAF50;
+  box-shadow: 0 0 0 2px white;
+}
+
+.status-offline {
+  background-color: #78909C; /* Blue Grey */
+  box-shadow: 0 0 0 2px white;
+}
